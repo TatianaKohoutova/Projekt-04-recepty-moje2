@@ -1,0 +1,187 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Source Sans Pro', sans-serif; 
+*/
+/* ------------------------------- */
+
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    text-shadow:  1px 1px rgb(0, 0, 0, 0.7);
+}
+
+
+.receptvelky {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-image: url("images/salat.jpg");;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid white;
+    min-height: 200px;
+    justify-content: space-between;
+}
+
+.receptymale {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.recept2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-height: 90px;
+    border-bottom: 1px solid white;
+}
+
+.pa {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 14px;
+    padding: 10px;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: white;
+    margin: 0;
+    text-align: justify;
+    align-self: flex-end;
+}
+
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    align-self: flex-end;
+    margin: 0;
+}
+
+
+.prvni {
+    background-image: url("images/chlebicek.jpg");
+}
+
+.druhy {
+    background-image: url("images/tacos.jpg");
+}
+
+.treti {
+    background-image: url("images/cizrna.jpg");
+}
+
+.ctvrty {
+    background-image: url("images/burger.jpg");
+    border-bottom: none;
+}
+
+
+
+
+@media (min-width: 540px) and (max-width: 960px) {
+    .recept2 {
+        width: 50%;
+        min-height: 150px;
+    }
+    .receptvelky {
+        min-height: 250px;
+    }
+
+    .treti {
+        border-bottom: none;
+        border-right: 1px solid white;
+    }
+
+    .prvni {
+        border-right: 1px solid white;
+    }
+}
+
+
+@media (min-width: 960px) {
+    body {
+        flex-direction: row;
+    }
+    .receptvelky {
+        width: 40%;
+        border-right: 1px solid white;
+    }
+    .receptymale {
+        width: 60%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .recept2 {
+        width: 50%;
+    }
+
+    .prvni, .druhy {
+        border-right: 1px solid white;
+    }
+}
